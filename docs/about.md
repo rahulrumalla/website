@@ -12,7 +12,7 @@ Rahul's expertise as a proficient generalist allows him to excel at the converge
 
 At SoundCloud, Rahul served in a dual-role as the Director of Product and Engineering, where he conceptualized, setup and led the Integrations & Partnerships division. Following his tenure at SoundCloud, Rahul embarked on his second entrepreneurial journey, co-founding Otterspace, where he assumed the role of CTO & Managing Director.
 
-Rahul is a frequent [speaker](/talks) and presenter at renowned conferences within the Music Industry and Web3 domains, showcasing his expertise in these fields.
+Rahul is a frequent talks and presenter at renowned conferences within the Music Industry and Web3 domains, showcasing his expertise in these fields.
 
 ## Contact
 If you'd like to get in touch with me, you can email me at [me@rahulrumalla.com](mailto:me@rahulrumalla.com) or DM me on social links found at the top of the site.
