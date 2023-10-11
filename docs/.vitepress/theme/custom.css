@@ -1,0 +1,16 @@
+/* .vitepress/theme/custom.css */
+:root {
+  /* --vp-c-brand: green;
+  --vp-c-brand-light: green; */
+
+  --vp-c-bg: #F6F3EA;
+  /* --vp-font-family-base: 'IBM Plex Sans' */
+}
+
+.dark {
+    --vp-c-bg: #1e1e20;
+}
+
+.VPImage {
+  border-radius: 5%;
+}
