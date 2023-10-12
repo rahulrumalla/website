@@ -1,9 +1,28 @@
 import { defineConfig } from "vitepress";
 
+const GOOGLE_TAG_MANAGER = process.env.GOOGLE_TAG_MANAGER;
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Rahul Rumalla",
-  description: "A VitePress Site",
+  description: "Rahul Rumalla",
+  head: [
+    [
+      "script",
+      {
+        async: "",
+        src: `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_MANAGER}`,
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ${GOOGLE_TAG_MANAGER});`,
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
