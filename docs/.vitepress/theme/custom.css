@@ -4,7 +4,9 @@
   --vp-c-brand-light: green; */
 
   --vp-c-bg: #F6F3EA;
-  /* --vp-font-family-base: 'IBM Plex Sans' */
+  --vp-c-brand-1: #D97A52;
+  --vp-c-brand-2: #E48F5C;
+  --vp-c-brand-3: #E48F5C;
 }
 
 .dark {
@@ -13,4 +15,6 @@
 
 .VPImage {
   border-radius: 5%;
+  border-color: #1e1e20;
+  border-style: solid;
 }
