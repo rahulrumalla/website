@@ -20,7 +20,7 @@ export default defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', ${GOOGLE_TAG_MANAGER});`,
+      gtag('config', '${GOOGLE_TAG_MANAGER}');`,
     ],
   ],
   themeConfig: {
