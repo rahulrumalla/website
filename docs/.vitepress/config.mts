@@ -27,14 +27,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "About", link: "/about" },
-      { text: "Blog", link: "/blog/" },
+      { text: "Blog", link: "https://rahulrumalla.substack.com/" },
       {
-        text: "Offerings",
-        items: [
-          { text: "Talks", link: "/talks" },
-          { text: "Mentorship", link: "/mentorship" },
-          { text: "Consulting", link: "/consulting" },
-        ],
+        text: "Talks",
+        link: "/talks"
+        // items: [
+        //   { text: "Talks", link: "/talks" },
+        // ],
       },
     ],
 
@@ -46,7 +45,7 @@ export default defineConfig({
 
     footer: {
       message: "",
-      copyright: "© 2023 RSQUARE UG",
+      copyright: "© 2025 RSQUARE UG",
     },
   },
 });
