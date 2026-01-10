@@ -1,62 +1,108 @@
 [
   {
     "id": "safecon-2025",
-    "title": "Safe{Con} 2025",
-    "event": "Safe{Con}",
-    "date": "2025",
-    "dateSort": "2025-12-31",
-    "tags": ["safe", "smart-accounts"],
-    "links": [
-      { "label": "Event", "url": "https://conf.safe.global/" }
-    ]
-  },
-  {
-    "id": "dappcon-2025",
-    "title": "DappCon 2025",
-    "event": "DappCon",
+    "title": "Safe Labs: Building Enterprise Grade",
+    "event": "SafeCon 2025",
     "location": "Berlin, Germany",
-    "date": "2025-05",
-    "dateSort": "2025-05-01",
-    "tags": ["ethereum", "dapps"],
+    "date": "2025-06-18",
+    "dateSort": "2025-06-18",
+    "description": "Presenting Safe Labs' vision, strategy and roadmap",
+    "tags": ["safe", "cypherprise"],
     "links": [
-      { "label": "Recording", "url": "https://www.youtube.com/watch?v=uLA8hPRFAg4" }
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=uLA8hPRFAg4"
+      }
     ],
     "videoType": "youtube",
     "videoId": "uLA8hPRFAg4"
   },
   {
-    "id": "defisecuritysummit-2025",
-    "title": "DeFi Security Summit 2025",
-    "event": "DeFi Security Summit",
-    "date": "2025",
-    "dateSort": "2025-12-31",
-    "tags": ["defi", "security"],
+    "id": "scaling-defi-2025-safe",
+    "title": "Safe × Hypernative",
+    "event": "Scaling DeFi",
+    "location": "Buenos Aires, Argentina",
+    "date": "2025-11-20",
+    "dateSort": "2025-11-20",
+    "description": "This segment highlights Safe's role in non-custodial asset management and Hypernative's real-time threat detection and automated security tooling — two pillars that are essential for scaling secure onchain operations.",
+    "tags": ["safe", "security", "defi", "hypernative"],
     "links": [
-      { "label": "Schedule", "url": "https://defisecuritysummit.org/summit-2025" }
-    ]
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=zRR8hAkw2KA"
+      }
+    ],
+    "videoType": "youtube",
+    "videoId": "zRR8hAkw2KA"
+  },
+  {
+    "id": "scaling-defi-2025-risk",
+    "title": "Risk Management Infrastructure for Non-Custodial Asset Management",
+    "event": "Scaling DeFi",
+    "location": "Buenos Aires, Argentina",
+    "date": "2025-11-20",
+    "dateSort": "2025-11-20",
+    "description": "This panel breaks down what \"risk infrastructure\" actually means in practice and what becomes fragile as the system scales from millions to billions. We examine trade-offs between human discretion and contract-enforced constraints, metrics for onchain portfolio risk, and how to build explainable, auditable systems for institutional allocators.",
+    "tags": ["defi", "security", "safe"],
+    "links": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=eQGSfFtKK0k"
+      }
+    ],
+    "videoType": "youtube",
+    "videoId": "eQGSfFtKK0k"
   },
   {
     "id": "x-broadcast-2025",
-    "title": "X Live Broadcast",
+    "title": "CoinTelegraph Chain Reaction Podcast Live on X",
     "event": "X Spaces",
     "date": "2025",
     "dateSort": "2025-12-31",
-    "tags": ["web3", "discussion"],
+    "tags": ["safe", "podcast"],
     "links": [
-      { "label": "Broadcast", "url": "https://x.com/i/broadcasts/1YqKDNAQOrvJV" }
+      {
+        "label": "X Live Broadcast",
+        "url": "https://x.com/i/broadcasts/1YqKDNAQOrvJV"
+      }
     ]
+  },
+  {
+    "id": "devcon-7-2024",
+    "title": "Do you really know your web3 users?",
+    "event": "DevCon 7",
+    "location": "Bangkok, Thailand",
+    "date": "2024-11-13",
+    "dateSort": "2024-11-13",
+    "description": "Panel discussion exploring how teams can identify user segments and understand behaviors in the privacy-focused Web3 environment. Addresses strategies for effective product discovery while respecting anonymity concerns, and examines approaches to activation and growth as the industry works toward mainstream adoption.",
+    "tags": ["ethereum", "product", "privacy", "ux"],
+    "links": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=KSfkX-dGskg"
+      },
+      {
+        "label": "Archive",
+        "url": "https://archive.devcon.org/devcon-7/do-you-really-know-your-web3-users/"
+      }
+    ],
+    "videoType": "youtube",
+    "videoId": "KSfkX-dGskg"
   },
   {
     "id": "devcon-bogota-2022",
     "title": "DevCon Bogotá - EIP4973, Badges and DAOs",
-    "event": "DevCon",
+    "event": "DevCon 6",
     "location": "Bogotá, Colombia",
     "date": "2022-10-19",
     "dateSort": "2022-10-19",
     "description": "As part of conceptualizing the protocol for Otterspace, we reflected our learning into the standard EIP-4973. In this talk I share my learnings and rationale for it's design and how it affects DAOs and web3 ecosystems in general.",
-    "tags": ["ethereum", "DAOs", "EIP-4973"],
+    "tags": ["ethereum", "dao", "eip-4973"],
     "links": [
-      { "label": "YouTube", "url": "https://www.youtube.com/watch?v=LhUgGSzZL4Y" }
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=LhUgGSzZL4Y"
+      }
     ],
     "videoType": "youtube",
     "videoId": "LhUgGSzZL4Y",
@@ -70,40 +116,31 @@
     "date": "2019-11-09",
     "dateSort": "2019-11-09",
     "description": "My first time in Berlin presenting a talk at Token Engineering's Global Gathering event. TE is a wonderful community of intellectual peers and I was invited to present my observations within the emerging Token Engineering space, since I setup the community in NYC.",
-    "tags": ["token-engineering", "web3"],
+    "tags": ["ethereum"],
     "links": [
-      { "label": "YouTube", "url": "https://www.youtube.com/watch?v=04HSmd45pl8" }
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=04HSmd45pl8"
+      }
     ],
     "videoType": "youtube",
     "videoId": "04HSmd45pl8",
     "startTime": 285
   },
   {
-    "id": "vue-nyc-2018",
-    "title": "Vue NYC - Building dApps on Ethereum with nuxt-box",
-    "event": "Vue NYC",
-    "location": "New York, USA",
-    "date": "2018-07-19",
-    "dateSort": "2018-07-19",
-    "description": "This talk covered the basics of Blockchain, Smart Contracts & the Ethereum ecosystem followed by the demo of using nuxt-box as part of the developer toolkit necessary to build decentralized applications using VueJs and Nuxt.",
-    "tags": ["vue", "ethereum", "developer-tools"],
-    "links": [
-      { "label": "YouTube", "url": "https://www.youtube.com/watch?v=jghS1N-Zha8" }
-    ],
-    "videoType": "youtube",
-    "videoId": "jghS1N-Zha8",
-    "startTime": 815
-  },
-  {
     "id": "dog-n-bone-2018",
     "title": "Dog N Bone Podcast - Black Box Royalties",
     "event": "Dog N Bone Podcast",
+    "location": "London, UK",
     "date": "2018-02-23",
     "dateSort": "2018-02-23",
     "description": "I was invited to discuss the so called 'Black Box' royalties that remain unclaimed by music artists, the need to audit performing rights organisations, and the potential for Blockchain in the music industry.",
-    "tags": ["music", "blockchain", "royalties"],
+    "tags": ["music", "blockchain", "royalties", "podcast"],
     "links": [
-      { "label": "Spotify", "url": "https://open.spotify.com/episode/6my1UcHYpibyuWF3qxAmmV" }
+      {
+        "label": "Spotify",
+        "url": "https://open.spotify.com/episode/6my1UcHYpibyuWF3qxAmmV"
+      }
     ],
     "videoType": "spotify",
     "videoId": "6my1UcHYpibyuWF3qxAmmV"

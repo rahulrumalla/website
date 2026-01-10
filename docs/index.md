@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Rahul Rumalla"
-  text: "CEO at Safe Labs"
+  text: "Building systems people can own and trust"
   tagline: "I’ve spent my career building systems that people can actually own and trust. My work spans self-custody, financial infrastructure, and large-scale platforms.
 
 

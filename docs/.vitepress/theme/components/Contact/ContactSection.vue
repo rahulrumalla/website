@@ -3,17 +3,9 @@
     <div class="contact-grid">
       <div class="contact-block">
         <h3>Speaking & Media</h3>
-        <p>Conference talks, podcasts, and media inquiries.</p>
+        <p>Talks, podcasts, and media inquiries.</p>
         <a href="mailto:speaking@rahulrumalla.com" class="contact-button">
-          speaking@rahulrumalla.com
-        </a>
-      </div>
-
-      <div class="contact-block">
-        <h3>Partnerships</h3>
-        <p>Strategic partnerships and collaboration opportunities.</p>
-        <a href="mailto:partnerships@rahulrumalla.com" class="contact-button">
-          partnerships@rahulrumalla.com
+          speaking (at) rahulrumalla.com
         </a>
       </div>
 
@@ -21,22 +13,7 @@
         <h3>General</h3>
         <p>General inquiries and other topics.</p>
         <a href="mailto:me@rahulrumalla.com" class="contact-button">
-          me@rahulrumalla.com
-        </a>
-      </div>
-    </div>
-
-    <div class="social-links">
-      <h3>Connect</h3>
-      <div class="social-grid">
-        <a href="https://www.linkedin.com/in/rahul-rumalla/" target="_blank" class="social-link">
-          LinkedIn
-        </a>
-        <a href="https://x.com/rsquare" target="_blank" class="social-link">
-          X (Twitter)
-        </a>
-        <a href="https://rahulrumalla.substack.com/" target="_blank" class="social-link">
-          Substack
+          hello (at) rahulrumalla.com
         </a>
       </div>
     </div>
@@ -47,7 +24,6 @@
 .contact-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 .contact-grid {
