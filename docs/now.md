@@ -1,13 +1,13 @@
 ---
 layout: doc
-title: Now / Work
+title: Current focus
 sidebar: false
 aside: false
 ---
 
-# What I'm Working On
+# What I'm working on
 
-## Safe Labs
+### Safe Labs
 
 Safe Labs is the product company behind <a href="https://app.safe.global" target="_blank">Safe Wallet</a> and Safe Smart Accounts, the most widely adopted multisig-based smart account architecture for secure onchain ownership. Safe is used for treasury custody and onchain operations by organizations and individuals, securing over 100 billion dollars in assets and processing more than 1.4 trillion dollars in transaction volume.
 

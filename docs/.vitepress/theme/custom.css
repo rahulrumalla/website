@@ -19,6 +19,18 @@
   border-style: solid;
 }
 
+/* Hero text size adjustment */
+.VPHero .text {
+  font-size: 2.5rem !important;
+  line-height: 1.3 !important;
+}
+
+@media (min-width: 768px) {
+  .VPHero .text {
+    font-size: 3rem !important;
+  }
+}
+
 /* Homepage - Visual Refinement */
 
 .home-intro {

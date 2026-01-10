@@ -52,7 +52,7 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "About", link: "/about" },
-      { text: "Now/Work", link: "/now" },
+      { text: "Current focus", link: "/now" },
       { text: "Writing", link: "/writing" },
       { text: "Speaking", link: "/speaking" },
       { text: "Contact", link: "/contact" },
@@ -66,7 +66,7 @@ export default defineConfig({
 
     footer: {
       message: "",
-      copyright: "© 2025 RSQUARE UG",
+      copyright: "© 2025 Rahul Rumalla · RSQUARE UG",
     },
   },
 });
