@@ -11,13 +11,13 @@ I write about product strategy, leadership, and the systems behind large-scale d
 
 My focus is on long-term thinking rather than tactics, and on building systems that remain legible, reliable, and trustworthy as they scale.
 
-## Topics I Write About
+### Topics I write about
 
 - Strategic models for building and scaling products
 - Leadership and organizational design
 - Product philosophy
 - Self-custody UX and secure defaults
 
-## Latest from Substack
+## Latest from substack
 
 <SubstackFeed />

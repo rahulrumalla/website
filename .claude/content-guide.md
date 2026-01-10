@@ -3,6 +3,7 @@
 Complete guide for managing content on your VitePress personal website.
 
 ## Table of Contents
+
 1. [VitePress Fundamentals](#vitepress-fundamentals)
 2. [Adding New Pages](#adding-new-pages)
 3. [Managing Talks](#managing-talks)
@@ -21,11 +22,13 @@ Complete guide for managing content on your VitePress personal website.
 VitePress supports multiple layout types. This site uses two:
 
 **1. Home Layout** (Hero page)
+
 - Used for: Homepage only
 - Features: Large hero section with image, name, tagline, and action buttons
 - File: `docs/index.md`
 
 **2. Doc Layout** (Content pages)
+
 - Used for: All other pages (about, talks, blog)
 - Features: Clean content-focused layout
 - Configuration: Sidebar and aside disabled for minimal design
@@ -36,16 +39,17 @@ Every markdown file starts with YAML frontmatter between `---` markers:
 
 ```yaml
 ---
-layout: doc           # Layout type: home | doc
-sidebar: false        # Show/hide sidebar (we use false)
-aside: false          # Show/hide table of contents (we use false)
-title: Page Title     # Optional: Browser tab title
+layout: doc # Layout type: home | doc
+sidebar: false # Show/hide sidebar (we use false)
+aside: false # Show/hide table of contents (we use false)
+title: Page Title # Optional: Browser tab title
 ---
 ```
 
 ### Markdown Extensions
 
 VitePress supports:
+
 - **Standard markdown**: Headings, lists, links, images
 - **GitHub-flavored markdown**: Tables, task lists, strikethrough
 - **Custom containers**: :::tip, :::warning, :::danger
@@ -55,6 +59,7 @@ VitePress supports:
 ### File-Based Routing
 
 Files automatically become pages:
+
 - `docs/index.md` → `/` (homepage)
 - `docs/about.md` → `/about`
 - `docs/talks.md` → `/talks`
@@ -96,7 +101,7 @@ Your content goes here. Use markdown formatting:
 
 ## Section Heading
 
-Paragraph text with **bold** and *italic* formatting.
+Paragraph text with **bold** and _italic_ formatting.
 
 ### Subsection
 
@@ -120,8 +125,8 @@ nav: [
   { text: "About", link: "/about" },
   { text: "Blog", link: "https://rahulrumalla.substack.com/" },
   { text: "Talks", link: "/talks" },
-  { text: "New Page", link: "/new-page" },  // Add this
-]
+  { text: "New Page", link: "/new-page" }, // Add this
+];
 ```
 
 ### Step 4: Test Locally
@@ -195,12 +200,14 @@ Description...
 #### 1. Get Video Embed Code
 
 **For YouTube**:
+
 1. Go to the video on YouTube
 2. Click "Share" → "Embed"
 3. Copy the iframe code
 4. Add `&start=XXX` to URL to start at specific second (optional)
 
 **For Spotify**:
+
 1. Open episode on Spotify
 2. Click "..." → "Share" → "Embed episode"
 3. Copy the iframe code
@@ -267,13 +274,12 @@ The navigation links to it externally, and `docs/blog/index.md` is just a placeh
 No changes needed. Continue publishing on Substack.
 
 To update the link:
+
 1. Edit `docs/.vitepress/config.mts`
 2. Update the URL in the nav array:
 
 ```typescript
-nav: [
-  { text: "Blog", link: "https://your-new-blog-url.com/" }
-]
+nav: [{ text: "Blog", link: "https://your-new-blog-url.com/" }];
 ```
 
 ### Option 2: Move to Local Blog
@@ -286,8 +292,8 @@ In `docs/.vitepress/config.mts`:
 
 ```typescript
 nav: [
-  { text: "Blog", link: "/blog/" }  // Changed from external URL
-]
+  { text: "Blog", link: "/blog/" }, // Changed from external URL
+];
 ```
 
 #### 2. Create Blog Index
@@ -339,6 +345,7 @@ Save as `docs/blog/post-slug.md`
 ### Option 3: Hybrid Approach
 
 Keep Substack as primary, but mirror select posts locally:
+
 - Main blog remains on Substack (nav links there)
 - Create `docs/featured/` directory for select posts
 - Add "Featured Writing" page to showcase best content
@@ -385,13 +392,14 @@ Images in `public/` are served from root `/`:
 **Used in**: Homepage hero (configured in `docs/index.md` frontmatter)
 
 **To update**:
+
 1. Optimize your image (recommended: ~800x800px, under 200KB)
 2. Replace `docs/public/profile.jpg`
 3. Keep filename same, or update frontmatter:
 
 ```yaml
 hero:
-  image: /new-profile.jpg  # If you renamed it
+  image: /new-profile.jpg # If you renamed it
 ```
 
 ### Image Best Practices
@@ -418,11 +426,11 @@ Edit `docs/.vitepress/theme/custom.css`:
 
 ```css
 :root {
-  --vp-c-bg: #F6F3EA;              /* Page background */
-  --vp-c-bg-soft: #f1ede0;         /* Soft background */
-  --vp-c-brand-1: #D97A52;         /* Primary brand color */
-  --vp-c-brand-2: #E48F5C;         /* Secondary brand */
-  --vp-c-brand-3: #E48F5C;         /* Tertiary brand */
+  --vp-c-bg: #f6f3ea; /* Page background */
+  --vp-c-bg-soft: #f1ede0; /* Soft background */
+  --vp-c-brand-1: #d97a52; /* Primary brand color */
+  --vp-c-brand-2: #e48f5c; /* Secondary brand */
+  --vp-c-brand-3: #e48f5c; /* Tertiary brand */
 }
 ```
 
@@ -430,8 +438,8 @@ Edit `docs/.vitepress/theme/custom.css`:
 
 ```css
 .dark {
-  --vp-c-bg: #1e1e20;              /* Dark background */
-  --vp-c-bg-soft: #252529;         /* Soft dark background */
+  --vp-c-bg: #1e1e20; /* Dark background */
+  --vp-c-bg-soft: #252529; /* Soft dark background */
   /* Brand colors typically same in dark mode */
 }
 ```
@@ -450,7 +458,9 @@ Add any custom styles to `custom.css`:
 
 ```css
 /* Example: Style all headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--vp-c-brand-1);
 }
 
@@ -483,12 +493,13 @@ nav: [
   { text: "Blog", link: "https://external-blog.com/" },
   {
     text: "More",
-    items: [                         // Dropdown menu
+    items: [
+      // Dropdown menu
       { text: "Talks", link: "/talks" },
-      { text: "Projects", link: "/projects" }
-    ]
-  }
-]
+      { text: "Projects", link: "/projects" },
+    ],
+  },
+];
 ```
 
 ### Social Links
@@ -500,8 +511,8 @@ socialLinks: [
   { icon: "github", link: "https://github.com/username" },
   { icon: "linkedin", link: "https://linkedin.com/in/username" },
   { icon: "twitter", link: "https://twitter.com/username" },
-  { icon: "mastodon", link: "https://mastodon.social/@username" }
-]
+  { icon: "mastodon", link: "https://mastodon.social/@username" },
+];
 ```
 
 **Available icons**: github, twitter, linkedin, facebook, instagram, youtube, slack, discord, mastodon, and custom SVG icons.
@@ -520,9 +531,9 @@ footer: {
 ### Internal Links in Content
 
 ```markdown
-[Link text](/about)              <!-- Absolute path -->
-[Link with anchor](/about#contact)  <!-- Link to section -->
-[Link text](./relative.md)       <!-- Relative path -->
+[Link text](/about) <!-- Absolute path -->
+[Link with anchor](/about#contact) <!-- Link to section -->
+[Link text](./relative.md) <!-- Relative path -->
 ```
 
 ### External Links
@@ -612,8 +623,7 @@ aside: false
 
 # Contact
 
-Get in touch with me for speaking opportunities, collaborations,
-or just to say hello.
+Get in touch with me for speaking opportunities, collaborations, or just to say hello.
 
 ## Email
 

@@ -7,6 +7,8 @@ aside: false
 
 # Speaking
 
-Public talks, presentations, and appearances at conferences and in communities. [Get in touch](/contact) if you're interested in having me speak at your event.
+I speak about self-custody, digital ownership, and the design of high-stakes infrastructure. My talks draw on my work building and leading systems used at global scale.
+
+[Get in touch](/contact) if you're interested in having me speak at your event.
 
 <SpeakingList />

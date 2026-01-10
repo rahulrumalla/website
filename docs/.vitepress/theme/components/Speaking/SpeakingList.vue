@@ -1,27 +1,25 @@
 <script setup>
-import { ref, computed } from 'vue'
-import speakingData from '../../../data/speaking.json'
+import { ref, computed } from "vue";
+import speakingData from "../../../data/speaking.json";
 
-const selectedTag = ref(null)
+const selectedTag = ref(null);
 
 const sortedTalks = computed(() => {
-  return [...speakingData].sort((a, b) =>
-    b.dateSort.localeCompare(a.dateSort)
-  )
-})
+  return [...speakingData].sort((a, b) => b.dateSort.localeCompare(a.dateSort));
+});
 
 const filteredTalks = computed(() => {
-  if (!selectedTag.value) return sortedTalks.value
-  return sortedTalks.value.filter(talk =>
+  if (!selectedTag.value) return sortedTalks.value;
+  return sortedTalks.value.filter((talk) =>
     talk.tags.includes(selectedTag.value)
-  )
-})
+  );
+});
 
 const allTags = computed(() => {
-  const tags = new Set()
-  speakingData.forEach(talk => talk.tags.forEach(tag => tags.add(tag)))
-  return Array.from(tags).sort()
-})
+  const tags = new Set();
+  speakingData.forEach((talk) => talk.tags.forEach((tag) => tags.add(tag)));
+  return Array.from(tags).sort();
+});
 </script>
 
 <template>
@@ -60,7 +58,9 @@ const allTags = computed(() => {
 
       <div v-if="talk.videoId && talk.videoType === 'youtube'" class="video">
         <iframe
-          :src="`https://www.youtube.com/embed/${talk.videoId}${talk.startTime ? '?start=' + talk.startTime : ''}`"
+          :src="`https://www.youtube.com/embed/${talk.videoId}${
+            talk.startTime ? '?start=' + talk.startTime : ''
+          }`"
           width="560"
           height="315"
           frameborder="0"
@@ -95,16 +95,14 @@ const allTags = computed(() => {
 .speaking-list {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 2rem;
 }
 
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  padding-bottom: 3rem;
 }
 
 .tag-filter {
@@ -130,9 +128,7 @@ const allTags = computed(() => {
 }
 
 .talk-entry {
-  margin-bottom: 4rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--vp-c-divider);
 }
 
 .talk-entry:last-child {
