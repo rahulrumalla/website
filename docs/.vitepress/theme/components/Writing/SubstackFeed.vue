@@ -136,7 +136,7 @@ onMounted(async () => {
   padding: 2rem;
   text-align: center;
   color: var(--vp-c-text-2);
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
 }
 
 .error {
@@ -145,7 +145,7 @@ onMounted(async () => {
 
 .posts-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: 1.5rem;
   margin: 2.5rem 0;
 }
 
@@ -154,7 +154,7 @@ onMounted(async () => {
   gap: 1.5rem;
   padding: 0;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--vp-c-bg-soft);
   text-decoration: none;
   color: inherit;
@@ -214,26 +214,26 @@ onMounted(async () => {
 .post-card h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  font-size: 1.3rem;
+  font-size: var(--font-size-xl);
   border-bottom: none;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--letter-spacing-normal);
   color: var(--vp-c-text-1);
-  line-height: 1.3;
+  line-height: var(--line-height-snug);
 }
 
 .post-card time {
   display: block;
   margin-bottom: 1rem;
   color: var(--vp-c-text-2);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   font-weight: 500;
 }
 
 .excerpt {
   margin: 0;
-  line-height: 1.7;
+  line-height: var(--line-height-relaxed);
   color: var(--vp-c-text-2);
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -249,13 +249,13 @@ onMounted(async () => {
 
 .button {
   display: inline-block;
-  padding: 0.875rem 2rem;
+  padding: 0.75rem 1.5rem;
   background: var(--vp-c-brand-1);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   transition: all 0.2s ease;
 }
 
@@ -285,11 +285,11 @@ onMounted(async () => {
   }
 
   .post-card h3 {
-    font-size: 1.15rem;
+    font-size: var(--font-size-lg);
   }
 
   .excerpt {
-    font-size: 0.95rem;
+    font-size: var(--font-size-sm);
     -webkit-line-clamp: 3;
   }
 }
