@@ -3,8 +3,8 @@
     "name": "Rahul Rumalla"
   },
   "devDependencies": {
-    "@types/node": "^20.8.4",
-    "vitepress": "^1.0.0-rc.20"
+    "@types/node": "^22.10.5",
+    "vitepress": "^1.6.4"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
