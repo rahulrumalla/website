@@ -29,16 +29,6 @@ yarn docs:preview  # Preview production build locally
 yarn docs:clean    # Clean build cache
 ```
 
-## Documentation
-
-Comprehensive guides are available in the `.claude/` directory:
-
-- **[Project Context](./.claude/project-context.md)** - Architecture and tech stack overview
-- **[Content Guide](./.claude/content-guide.md)** - How to add/edit content
-- **[Conventions](./.claude/conventions.md)** - File structure and coding patterns
-- **[Common Tasks](./.claude/common-tasks.md)** - Step-by-step task guides
-- **[Quick Reference](./.claude/quick-reference.md)** - One-page cheat sheet
-
 ## Project Structure
 
 ```
