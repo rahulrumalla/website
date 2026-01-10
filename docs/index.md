@@ -1,17 +1,22 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "Rahul Rumalla"
-  text: "@rsquare"
-  tagline: This is my online portfolio of things I dabble with professionally. I'm a 2x founder and worked in many different roles in engineering and product, from individual contributor to leadership for over 14 years. I particularly enjoy building products in music, web3 and creator economies.
+  text: "CEO at Safe Labs"
+  tagline: "I’ve spent my career building systems that people can actually own and trust. My work spans self-custody, financial infrastructure, and large-scale platforms.
+
+
+  Today, I’m CEO of Safe Labs, building core infrastructure for the onchain economy.
+
+
+  Previously, I led platform initiatives at SoundCloud and founded startups across Web3 and the creator ecosystem."
   image: /profile.jpg
   actions:
-  - theme: brand
-    text: Get in touch
-    link: /about#contact
-  - theme: alt
-    text: To the blog
-    link: /blog/
+    - theme: brand
+      text: Contact
+      link: /contact
+    - theme: alt
+      text: Writing
+      link: /writing
 ---

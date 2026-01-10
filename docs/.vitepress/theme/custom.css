@@ -3,18 +3,121 @@
   /* --vp-c-brand: green;
   --vp-c-brand-light: green; */
 
-  --vp-c-bg: #F6F3EA;
-  --vp-c-brand-1: #D97A52;
-  --vp-c-brand-2: #E48F5C;
-  --vp-c-brand-3: #E48F5C;
+  --vp-c-bg: #f6f3ea;
+  --vp-c-brand-1: #d97a52;
+  --vp-c-brand-2: #e48f5c;
+  --vp-c-brand-3: #e48f5c;
 }
 
 .dark {
-    --vp-c-bg: #1e1e20;
+  --vp-c-bg: #1e1e20;
 }
 
 .VPImage {
   border-radius: 5%;
   border-color: #1e1e20;
   border-style: solid;
+}
+
+/* Homepage - Visual Refinement */
+
+.home-intro {
+  max-width: 900px;
+  margin: 4rem auto 6rem;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--vp-c-text-1);
+  text-align: center;
+}
+
+.home-intro p {
+  margin-bottom: 1.5rem;
+}
+
+.home-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.home-section {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.home-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
+}
+
+.home-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.home-section li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.home-section li::before {
+  content: "–";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+}
+
+.home-section p {
+  margin: 1.25rem 0;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+/* Speaking section links */
+.home-section a {
+  display: inline-block;
+  margin-right: 1.5rem;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.home-section a:hover {
+  opacity: 0.8;
+}
+
+/* Selected Work Component Spacing */
+.home-section .selected-work {
+  margin-top: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-intro {
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    margin: 3rem auto 4rem;
+  }
+
+  .home-section {
+    padding: 0 1.5rem;
+    margin: 4rem auto;
+  }
+
+  .home-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+  }
 }
