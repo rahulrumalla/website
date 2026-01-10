@@ -31,6 +31,27 @@
   }
 }
 
+/* Optimize homepage spacing for better viewport fit */
+@media (min-width: 640px) {
+  /* Reduce hero top padding offset from 80px to 32px */
+  .VPHero.has-image .container,
+  .VPHero.VPHomeHero {
+    padding-top: calc(
+      var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 32px
+    ) !important;
+  }
+
+  /* Reduce hero bottom padding from 64px to 32px */
+  .VPHero {
+    padding-bottom: 32px !important;
+  }
+
+  /* Reduce page bottom margin from 128px to 48px */
+  .VPHome {
+    margin-bottom: 48px !important;
+  }
+}
+
 /* Homepage - Visual Refinement */
 
 .home-intro {
