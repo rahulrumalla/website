@@ -108,12 +108,12 @@ const allTags = computed(() => {
 .tag-filter {
   padding: 0.5rem 1rem;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-2);
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
 }
 
 .tag-filter:hover {
@@ -138,8 +138,9 @@ const allTags = computed(() => {
 .talk-entry h2 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-2xl);
   border-bottom: none;
+  letter-spacing: var(--letter-spacing-normal);
 }
 
 .talk-meta {
@@ -148,7 +149,7 @@ const allTags = computed(() => {
   gap: 0.5rem;
   margin-bottom: 1rem;
   color: var(--vp-c-text-2);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
 }
 
 .talk-meta span:not(:last-child)::after {
@@ -158,7 +159,7 @@ const allTags = computed(() => {
 
 .description {
   margin: 1.5rem 0;
-  line-height: 1.6;
+  line-height: var(--line-height-normal);
 }
 
 .video {
@@ -175,7 +176,7 @@ const allTags = computed(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .links {
@@ -188,11 +189,11 @@ const allTags = computed(() => {
 .talk-link {
   padding: 0.5rem 1rem;
   border: 1px solid var(--vp-c-brand-1);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--vp-c-brand-1);
   text-decoration: none;
   transition: all 0.2s;
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
 }
 
 .talk-link:hover {
@@ -210,8 +211,8 @@ const allTags = computed(() => {
 .tag {
   padding: 0.25rem 0.75rem;
   background: var(--vp-c-bg-soft);
-  border-radius: 4px;
-  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
   color: var(--vp-c-text-2);
 }
 
@@ -221,7 +222,7 @@ const allTags = computed(() => {
   }
 
   .talk-entry h2 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
   }
 
   .filters {
