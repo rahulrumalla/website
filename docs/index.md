@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "Rahul Rumalla"
-  text: "Building systems people can own and trust"
-  tagline: "I’ve spent my career building systems that people can actually own and trust. My work spans self-custody, financial infrastructure, and large-scale platforms.
+  text: "Building systems people can truly own"
+  tagline: "I’ve spent my career building systems that people can truly own and trust. My work spans self-custody, financial infrastructure, and large-scale platforms.
 
 
   Today, I’m CEO of Safe Labs, building core infrastructure for the onchain economy.
