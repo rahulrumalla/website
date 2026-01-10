@@ -38,7 +38,15 @@
   border: 1px solid var(--vp-c-divider);
   border-radius: var(--radius-md);
   background: var(--vp-c-bg-soft);
+  box-shadow: var(--shadow-md);
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-block:hover {
+  border-color: rgba(217, 122, 82, 0.3);
+  box-shadow: var(--shadow-lg), var(--shadow-warm);
+  transform: translateY(-2px);
 }
 
 .contact-block h3 {
@@ -58,18 +66,35 @@
 .contact-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: var(--vp-c-brand-1);
+  background: linear-gradient(
+    180deg,
+    var(--vp-c-brand-1) 0%,
+    var(--vp-c-brand-3) 100%
+  );
+  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   color: white;
   text-decoration: none;
   border-radius: var(--radius-sm);
   font-weight: 500;
-  transition: all 0.2s;
   font-size: var(--font-size-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-button:hover {
-  background: var(--vp-c-brand-2);
-  transform: translateY(-2px);
+  background: linear-gradient(
+    180deg,
+    var(--vp-c-brand-2) 0%,
+    var(--vp-c-brand-1) 100%
+  );
+  color: white;
+  box-shadow: var(--shadow-lg), var(--shadow-warm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.contact-button:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 768px) {

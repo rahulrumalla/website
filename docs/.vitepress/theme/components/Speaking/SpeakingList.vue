@@ -163,11 +163,15 @@ const allTags = computed(() => {
 }
 
 .video {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow:
+    var(--shadow-lg),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .video iframe {
@@ -176,7 +180,7 @@ const allTags = computed(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: var(--radius-md);
+  border-radius: 0;
 }
 
 .links {

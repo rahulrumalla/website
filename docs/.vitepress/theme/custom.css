@@ -10,15 +10,15 @@
   --vp-c-brand-3: #c46843; /* Darker for better contrast */
 
   /* Typography Scale (1.25x ratio) */
-  --font-size-xs: 0.8rem;     /* 12.8px */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 1rem;     /* 16px */
-  --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;    /* 24px */
-  --font-size-3xl: 1.875rem;  /* 30px */
-  --font-size-4xl: 2.25rem;   /* 36px */
-  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-xs: 0.8rem; /* 12.8px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
 
   /* Line Heights */
   --line-height-tight: 1.2;
@@ -36,6 +36,17 @@
   /* Border Radius */
   --radius-sm: 6px;
   --radius-md: 8px;
+
+  /* Shadow System */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-warm: 0 4px 12px rgba(217, 122, 82, 0.15);
 }
 
 .dark {
@@ -43,9 +54,18 @@
 }
 
 .VPImage {
-  border-radius: var(--radius-md);
-  border-color: var(--vp-c-divider);
-  border-style: solid;
+  border-radius: 12px;
+  border: 3px solid var(--vp-c-bg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(217, 122, 82, 0.1);
+  transition: all 0.3s ease;
+}
+
+.VPImage:hover {
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(217, 122, 82, 0.25);
+}
+
+.dark .VPImage {
+  border-color: var(--vp-c-bg);
 }
 
 /* Hero text size adjustment */
@@ -64,23 +84,28 @@
 
 /* Optimize homepage spacing for better viewport fit */
 @media (min-width: 640px) {
-  /* Reduce hero top padding offset from 80px to 32px */
+  /* Moderate hero top padding - not too compressed */
   .VPHero.has-image .container,
   .VPHero.VPHomeHero {
     padding-top: calc(
-      var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 32px
+      var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 24px
     ) !important;
   }
 
-  /* Reduce hero bottom padding from 64px to 32px */
+  /* Moderate hero bottom padding */
   .VPHero {
-    padding-bottom: 32px !important;
+    padding-bottom: 24px !important;
   }
 
-  /* Reduce page bottom margin from 128px to 48px */
+  /* Moderate page bottom margin */
   .VPHome {
-    margin-bottom: 48px !important;
+    margin-bottom: 32px !important;
   }
+}
+
+/* Constrain hero image size for better balance */
+.VPHero .VPImage {
+  max-width: 320px;
 }
 
 /* Homepage - Visual Refinement */

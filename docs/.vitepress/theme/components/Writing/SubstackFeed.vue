@@ -158,14 +158,15 @@ onMounted(async () => {
   background: var(--vp-c-bg-soft);
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
 .post-card:hover {
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-lg), var(--shadow-warm);
 }
 
 .post-image-container {
@@ -180,11 +181,11 @@ onMounted(async () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .post-card:hover .post-image {
-  transform: scale(1.05);
+  transform: scale(1.08) rotate(1deg);
 }
 
 .post-image-placeholder {
@@ -194,9 +195,26 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-1) 0%,
+    var(--vp-c-brand-2) 50%,
+    #f4a261 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
   color: white;
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .post-image-placeholder svg {
@@ -250,18 +268,35 @@ onMounted(async () => {
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: var(--vp-c-brand-1);
+  background: linear-gradient(
+    180deg,
+    var(--vp-c-brand-1) 0%,
+    var(--vp-c-brand-3) 100%
+  );
+  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   color: white;
   text-decoration: none;
   border-radius: var(--radius-sm);
   font-weight: 500;
   font-size: var(--font-size-base);
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
-  background: var(--vp-c-brand-2);
-  transform: translateY(-2px);
+  background: linear-gradient(
+    180deg,
+    var(--vp-c-brand-2) 0%,
+    var(--vp-c-brand-1) 100%
+  );
+  color: white;
+  box-shadow: var(--shadow-lg), var(--shadow-warm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 768px) {
