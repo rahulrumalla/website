@@ -68,7 +68,7 @@
 
 /* Background Geometric Network Pattern */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -77,8 +77,11 @@ body::before {
   z-index: 0;
   pointer-events: none;
   opacity: var(--pattern-opacity);
-  background-image:
-    radial-gradient(circle at 2px 2px, var(--vp-c-brand-1) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    var(--vp-c-brand-1) 1px,
+    transparent 1px
+  );
   background-size: 60px 60px;
   background-position: 0 0, 30px 30px;
 }
@@ -94,10 +97,21 @@ body::after {
   z-index: 0;
   pointer-events: none;
   opacity: var(--gradient-opacity);
-  background:
-    radial-gradient(ellipse 800px 600px at 10% 20%, var(--vp-c-brand-1) 0%, transparent 50%),
-    radial-gradient(ellipse 600px 800px at 90% 80%, var(--vp-c-brand-2) 0%, transparent 50%),
-    radial-gradient(ellipse 700px 500px at 50% 50%, var(--vp-c-brand-1) 0%, transparent 60%);
+  background: radial-gradient(
+      ellipse 800px 600px at 10% 20%,
+      var(--vp-c-brand-1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 600px 800px at 90% 80%,
+      var(--vp-c-brand-2) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 700px 500px at 50% 50%,
+      var(--vp-c-brand-1) 0%,
+      transparent 60%
+    );
 }
 
 .VPDoc,
@@ -550,4 +564,91 @@ h3 {
   .stat-highlight {
     font-size: var(--font-size-lg);
   }
+}
+
+/* ============================================
+   Navigation Link Animated Underline
+   ============================================ */
+
+/*
+ * Technique: Pseudo-element (::after) approach
+ * Why: Clean separation of concerns - the underline is purely decorative
+ *      and doesn't affect the DOM or link structure. Allows smooth
+ *      width animation without affecting text layout.
+ */
+
+.VPNavBarMenuLink {
+  position: relative;
+  cursor: pointer !important; /* Show pointer cursor on hover - !important overrides CursorTrail */
+  /* Keep VitePress defaults but add position context for pseudo-element */
+}
+
+/* Ensure child elements (span) inherit the pointer cursor */
+.VPNavBarMenuLink span {
+  cursor: pointer !important;
+}
+
+.VPNavBarMenuLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Gap from text: 2px below the link baseline */
+  left: 0;
+  width: 0; /* Starting state: hidden */
+  height: 3px; /* Underline thickness */
+  background-color: var(--vp-c-brand-1); /* Primary brand color #d97a52 */
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1); /* Smooth ease-in-out */
+}
+
+/* Hover state: Animate underline from left to right */
+.VPNavBarMenuLink:hover::after {
+  width: 100%;
+}
+
+/* Focus state: Same as hover for keyboard navigation accessibility */
+.VPNavBarMenuLink:focus-visible::after {
+  width: 100%;
+}
+
+/* Active/current page: Underline always visible */
+.VPNavBarMenuLink.active::after {
+  width: 100%;
+}
+
+/*
+ * CUSTOMIZATION GUIDE:
+ *
+ * Animation Duration:
+ *   - Faster: transition: width 200ms ...
+ *   - Slower: transition: width 400ms ...
+ *
+ * Easing Options:
+ *   - Linear: cubic-bezier(0, 0, 1, 1)
+ *   - Ease-in-out (default): cubic-bezier(0.4, 0, 0.2, 1)
+ *   - Bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+ *   - Sharp: cubic-bezier(0.4, 0, 0.6, 1)
+ *
+ * Colors:
+ *   - Secondary brand: var(--vp-c-brand-2) or #e48f5c
+ *   - Darker brand: var(--vp-c-brand-3) or #c46843
+ *   - Custom: any hex/rgb value
+ *
+ * Thickness:
+ *   - Thinner: height: 1px
+ *   - Thicker: height: 3px
+ *
+ * Gap from text:
+ *   - Closer: bottom: -1px
+ *   - Further: bottom: -4px
+ *
+ * Animation direction (right to left):
+ *   - Change: left: 0; to right: 0;
+ *   - The width will expand from right edge instead
+ */
+
+/* Dark mode optimization (if using dark mode toggle) */
+.dark .VPNavBarMenuLink::after {
+  /* Brand color works well on dark backgrounds, but can customize if needed */
+  background-color: var(
+    --vp-c-brand-2
+  ); /* Slightly lighter for better contrast */
 }
