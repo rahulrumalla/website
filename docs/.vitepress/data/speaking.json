@@ -60,6 +60,8 @@
     "date": "2025",
     "dateSort": "2025-12-31",
     "tags": ["safe", "podcast"],
+    "videoType": "x-broadcast",
+    "videoUrl": "https://x.com/i/broadcasts/1YqKDNAQOrvJV",
     "links": [
       {
         "label": "X Live Broadcast",
