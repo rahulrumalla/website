@@ -65,4 +65,4 @@ See [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) for details
 
 ## License
 
-© 2025 RSQUARE UG
+© 2025 Rahul Rumalla · RSQUARE UG
