@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue';
 
 const isTouchDevice = ref(false);
+const isEnabled = ref(true);
 
 onMounted(() => {
   // Check if device is touch-enabled or mobile
@@ -11,6 +12,12 @@ onMounted(() => {
 
   if (isTouchDevice.value) {
     return; // Don't initialize cursor effect on touch devices
+  }
+
+  // Load initial preference from localStorage
+  const saved = localStorage.getItem('cursor-trail-enabled');
+  if (saved !== null) {
+    isEnabled.value = saved === 'true';
   }
 
   const canvas = document.getElementById('cursor-trail');
@@ -55,8 +62,11 @@ onMounted(() => {
 
   let mouseX = 0;
   let mouseY = 0;
+  let animationId = null;
 
   const handleMouseMove = (e) => {
+    if (!isEnabled.value) return;
+
     mouseX = e.clientX;
     mouseY = e.clientY;
 
@@ -77,43 +87,75 @@ onMounted(() => {
   const animate = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw particles (trail)
-    for (let i = particles.length - 1; i >= 0; i--) {
-      particles[i].update();
-      particles[i].draw();
+    if (isEnabled.value) {
+      // Draw particles (trail)
+      for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].draw();
 
-      if (particles[i].life <= 0) {
-        particles.splice(i, 1);
+        if (particles[i].life <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+
+      // Draw custom cursor dot at mouse position
+      if (mouseX > 0 || mouseY > 0) {
+        ctx.save();
+        ctx.fillStyle = '#d97a52';
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Add a subtle glow
+        ctx.strokeStyle = 'rgba(217, 122, 82, 0.5)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, 8, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
       }
     }
 
-    // Draw custom cursor dot at mouse position
-    if (mouseX > 0 || mouseY > 0) {
-      ctx.save();
-      ctx.fillStyle = '#d97a52';
-      ctx.beginPath();
-      ctx.arc(mouseX, mouseY, 6, 0, Math.PI * 2);
-      ctx.fill();
+    animationId = requestAnimationFrame(animate);
+  };
 
-      // Add a subtle glow
-      ctx.strokeStyle = 'rgba(217, 122, 82, 0.5)';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.arc(mouseX, mouseY, 8, 0, Math.PI * 2);
-      ctx.stroke();
-      ctx.restore();
+  // Listen for toggle events
+  const handleToggle = (event) => {
+    isEnabled.value = event.detail.enabled;
+
+    // Update cursor style
+    if (isEnabled.value) {
+      document.documentElement.style.setProperty('--cursor-display', 'none');
+    } else {
+      document.documentElement.style.setProperty('--cursor-display', 'auto');
+      // Clear particles and canvas when disabled
+      particles.length = 0;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
-
-    requestAnimationFrame(animate);
   };
 
   window.addEventListener('mousemove', handleMouseMove);
   window.addEventListener('resize', handleResize);
+  window.addEventListener('cursor-trail-toggle', handleToggle);
+
+  // Set initial cursor style
+  if (isEnabled.value) {
+    document.documentElement.style.setProperty('--cursor-display', 'none');
+  } else {
+    document.documentElement.style.setProperty('--cursor-display', 'auto');
+  }
+
   animate();
 
   onUnmounted(() => {
     window.removeEventListener('mousemove', handleMouseMove);
     window.removeEventListener('resize', handleResize);
+    window.removeEventListener('cursor-trail-toggle', handleToggle);
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+    // Restore default cursor
+    document.documentElement.style.setProperty('--cursor-display', 'auto');
   });
 });
 </script>
@@ -123,14 +165,14 @@ onMounted(() => {
 </template>
 
 <style>
-/* Hide default cursor globally on desktop only */
+/* Hide default cursor globally on desktop only when effect is enabled */
 @media (min-width: 961px) and (hover: hover) and (pointer: fine) {
   * {
-    cursor: none !important;
+    cursor: var(--cursor-display, none) !important;
   }
 
   a, button, input, textarea, select {
-    cursor: none !important;
+    cursor: var(--cursor-display, none) !important;
   }
 }
 </style>
