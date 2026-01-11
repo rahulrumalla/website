@@ -9,6 +9,28 @@ export default defineConfig({
     "CEO at Safe | Builder | Writer on Web3 infrastructure and self-custody",
   head: [
     [
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap",
+      },
+    ],
+    [
       "meta",
       {
         name: "description",

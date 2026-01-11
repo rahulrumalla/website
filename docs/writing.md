@@ -7,7 +7,7 @@ aside: false
 
 # Writing
 
-I write about product strategy, leadership, and the systems behind large-scale digital infrastructure. Much of my work explores how teams make decisions under uncertainty, how technical primitives become usable products, and how values are expressed through design.
+I write about product strategy, leadership, and the systems behind large-scale digital infrastructure. Much of my work explores how teams make <span class="key-term">decisions under uncertainty</span>, how technical primitives become usable products, and how values are expressed through design.
 
 My focus is on long-term thinking rather than tactics, and on building systems that remain legible, reliable, and trustworthy as they scale.
 
