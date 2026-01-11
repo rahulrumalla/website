@@ -54,10 +54,58 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --shadow-warm: 0 4px 12px rgba(217, 122, 82, 0.15);
+
+  /* Background Pattern + Gradient */
+  --pattern-opacity: 0.3;
+  --gradient-opacity: 0.12;
 }
 
 .dark {
   --vp-c-bg: #1e1e20;
+  --pattern-opacity: 0.2;
+  --gradient-opacity: 0.08;
+}
+
+/* Background Geometric Network Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--pattern-opacity);
+  background-image:
+    radial-gradient(circle at 2px 2px, var(--vp-c-brand-1) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* Background Gradient Mesh */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--gradient-opacity);
+  background:
+    radial-gradient(ellipse 800px 600px at 10% 20%, var(--vp-c-brand-1) 0%, transparent 50%),
+    radial-gradient(ellipse 600px 800px at 90% 80%, var(--vp-c-brand-2) 0%, transparent 50%),
+    radial-gradient(ellipse 700px 500px at 50% 50%, var(--vp-c-brand-1) 0%, transparent 60%);
+}
+
+.VPDoc,
+.VPHome,
+.VPNav,
+.VPFooter {
+  position: relative;
+  z-index: 1;
 }
 
 .VPImage {
